@@ -35,5 +35,9 @@ describe("TestTDD", () => {
     it('Calculate simple string with ";" delimiter ', () => {
       assert.strictEqual(this.stringCalc.calculate("5;6;7", ";"), 18);
     });
+    it("String with negative numbers return exceptions", () => {
+      const exercise = () => this.stringCalc.calculate("-5;6;7", ";");
+      assert.throws(exercise, new Error("Negative numbers not allowed!"));
+    });
   });
 });
