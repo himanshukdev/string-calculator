@@ -32,5 +32,8 @@ describe("TestTDD", () => {
     it('Calculate simple string with "\\n" delimiter ', () => {
       assert.strictEqual(this.stringCalc.calculate("5\n6\n7", "\n"), 18);
     });
+    it('Calculate simple string with ";" delimiter ', () => {
+      assert.strictEqual(this.stringCalc.calculate("5;6;7", ";"), 18);
+    });
   });
 });
