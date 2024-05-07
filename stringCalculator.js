@@ -1,17 +1,17 @@
 module.exports = class StringCalculator {
   constructor() {}
 
-  calculate(numberString = "", delimiter = ",") {
+  calculate(numberString = "") {
     let sum = 0;
 
-    this.convertString(numberString, delimiter).forEach((number) => {
+    this.convertString(numberString).forEach((number) => {
       sum += +number;
     });
 
     return sum;
   }
 
-  convertString(string, delimiter) {
-    return string.split(delimiter);
+  convertString(string) {
+    return string.split(",");
   }
 };
