@@ -39,5 +39,9 @@ describe("TestTDD", () => {
       const exercise = () => this.stringCalc.calculate("-5;6;7", ";");
       assert.throws(exercise, new Error("Negative numbers not allowed!"));
     });
+    it("String with 2 negatives numbers return exceptions", () => {
+      const exercise = () => this.stringCalc.calculate("-5;-6;7", ";");
+      assert.throws(exercise, new Error("Negative numbers not allowed!"));
+    });
   });
 });
